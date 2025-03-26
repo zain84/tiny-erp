@@ -1,0 +1,150 @@
+{
+  "salesOrders": [
+    {
+      "id": "SO001",
+      "customerId": "CUST001",
+      "customerName": "Acme Corporation",
+      "orderDate": "2025-03-05T00:00:00.000Z",
+      "expectedShipDate": "2025-03-20T00:00:00.000Z",
+      "status": "confirmed",
+      "reference": "SO-2025-001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 3200,
+      "taxAmount": 320,
+      "total": 3520,
+      "notes": "Priority customer order",
+      "items": [
+        {
+          "id": "SOI001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM",
+          "quantity": 4,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 320,
+          "total": 3520
+        }
+      ]
+    },
+    {
+      "id": "SO002",
+      "customerId": "CUST002",
+      "customerName": "TechStart Inc.",
+      "orderDate": "2025-03-12T00:00:00.000Z",
+      "expectedShipDate": "2025-03-25T00:00:00.000Z",
+      "status": "draft",
+      "reference": "SO-2025-002",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 1500,
+      "taxAmount": 150,
+      "total": 1650,
+      "notes": "New customer order",
+      "items": [
+        {
+          "id": "SOI002",
+          "itemId": "ITEM002",
+          "itemName": "Office Chair",
+          "description": "Ergonomic office chair with adjustable height",
+          "quantity": 10,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 150,
+          "taxRate": 10,
+          "taxAmount": 150,
+          "total": 1650
+        }
+      ]
+    }
+  ],
+  "salesInvoices": [
+    {
+      "id": "SI001",
+      "customerId": "CUST001",
+      "customerName": "Acme Corporation",
+      "invoiceDate": "2025-03-10T00:00:00.000Z",
+      "dueDate": "2025-04-10T00:00:00.000Z",
+      "status": "paid",
+      "reference": "INV-2025-001",
+      "salesOrderId": "SO001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 3200,
+      "taxAmount": 320,
+      "total": 3520,
+      "amountPaid": 3520,
+      "balance": 0,
+      "notes": "Paid via bank transfer",
+      "items": [
+        {
+          "id": "SII001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM",
+          "quantity": 4,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 320,
+          "total": 3520
+        }
+      ]
+    }
+  ],
+  "salesReturns": [
+    {
+      "id": "SR001",
+      "customerId": "CUST001",
+      "customerName": "Acme Corporation",
+      "returnDate": "2025-03-15T00:00:00.000Z",
+      "status": "completed",
+      "reference": "RET-2025-001",
+      "salesInvoiceId": "SI001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 800,
+      "taxAmount": 80,
+      "total": 880,
+      "reason": "Defective product",
+      "notes": "One laptop had screen issues",
+      "items": [
+        {
+          "id": "SRI001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM - Defective screen",
+          "quantity": 1,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 80,
+          "total": 880
+        }
+      ]
+    }
+  ],
+  "accountsReceivable": [
+    {
+      "id": "AR001",
+      "customerId": "CUST002",
+      "customerName": "TechStart Inc.",
+      "invoiceDate": "2025-03-20T00:00:00.000Z",
+      "dueDate": "2025-04-20T00:00:00.000Z",
+      "status": "pending",
+      "reference": "INV-2025-002",
+      "salesOrderId": "SO002",
+      "subtotal": 1500,
+      "taxAmount": 150,
+      "total": 1650,
+      "amountPaid": 0,
+      "balance": 1650,
+      "notes": "First order from new customer"
+    }
+  ]
+}

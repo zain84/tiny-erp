@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny-ERP - Standalone Transaction System</title>
+  
+  <!-- Bootstrap 4.6 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/window-manager.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-cubes mr-2"></i>
+          {{ appName }}
+          <small class="text-light">v{{ appVersion }}</small>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <i class="fas fa-user-circle mr-1"></i>
+                {{ user.name }}
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-item text-muted">{{ user.role }}</div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cog mr-2"></i> Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Main Content Area -->
+    <div class="container-fluid mt-3 mb-5 pb-5">
+      <!-- Windows will be dynamically created here -->
+      <erp-window 
+        v-for="window in windows" 
+        :key="window.id" 
+        :window="window"
+      ></erp-window>
+      
+      <!-- Transaction Launcher -->
+      <transaction-launcher></transaction-launcher>
+    </div>
+    
+    <!-- Window Taskbar -->
+    <erp-window-taskbar v-if="hasOpenWindows"></erp-window-taskbar>
+  </div>
+  
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Utility Scripts -->
+  <script src="js/utils/helpers.js"></script>
+  <script src="js/utils/data-service.js"></script>
+  
+  <!-- Window Manager -->
+  <script src="js/window-manager/window-manager.js"></script>
+  <script src="js/window-manager/transaction-launcher.js"></script>
+  
+  <!-- Common Components -->
+  <script src="components/common/base-transaction.js"></script>
+  <script src="components/common/data-table.js"></script>
+  <script src="components/common/form-controls.js"></script>
+  <script src="components/common/list-detail-view.js"></script>
+  
+  <!-- Dashboard Component -->
+  <script src="components/dashboard.js"></script>
+  
+  <!-- Masters Module -->
+  <script src="transactions/masters/company.js"></script>
+  <script src="transactions/masters/customer-group.js"></script>
+  <script src="transactions/masters/customer.js"></script>
+  <script src="transactions/masters/item-category.js"></script>
+  <script src="transactions/masters/item-unit.js"></script>
+  <script src="transactions/masters/item.js"></script>
+  <script src="transactions/masters/supplier.js"></script>
+  <script src="transactions/masters/location.js"></script>
+  
+  <!-- Purchasing Module -->
+  <script src="transactions/purchasing/purchase-order.js"></script>
+  <script src="transactions/purchasing/purchase-invoice.js"></script>
+  <script src="transactions/purchasing/purchase-return.js"></script>
+  <script src="transactions/purchasing/accounts-payable.js"></script>
+  
+  <!-- Sales Module -->
+  <script src="transactions/sales/sales-order.js"></script>
+  <script src="transactions/sales/sales-invoice.js"></script>
+  <script src="transactions/sales/sales-return.js"></script>
+  <script src="transactions/sales/accounts-receivable.js"></script>
+  
+  <!-- Accounting Module -->
+  <script src="transactions/accounting/general-ledger.js"></script>
+  <script src="transactions/accounting/accounts-receivable.js"></script>
+  <script src="transactions/accounting/accounts-payable.js"></script>
+  
+  <!-- Main Application Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

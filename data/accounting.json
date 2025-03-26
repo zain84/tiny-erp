@@ -1,0 +1,170 @@
+{
+  "generalLedger": [
+    {
+      "id": "GL001",
+      "date": "2025-03-01T00:00:00.000Z",
+      "reference": "GL-2025-001",
+      "description": "Initial setup",
+      "status": "posted",
+      "totalDebit": 10000,
+      "totalCredit": 10000,
+      "entries": [
+        {
+          "id": "GLE001",
+          "accountCode": "1000",
+          "accountName": "Cash",
+          "description": "Initial cash balance",
+          "debit": 10000,
+          "credit": 0
+        },
+        {
+          "id": "GLE002",
+          "accountCode": "3000",
+          "accountName": "Capital",
+          "description": "Initial capital",
+          "debit": 0,
+          "credit": 10000
+        }
+      ]
+    },
+    {
+      "id": "GL002",
+      "date": "2025-03-10T00:00:00.000Z",
+      "reference": "GL-2025-002",
+      "description": "Purchase of office supplies",
+      "status": "posted",
+      "totalDebit": 500,
+      "totalCredit": 500,
+      "entries": [
+        {
+          "id": "GLE003",
+          "accountCode": "6100",
+          "accountName": "Office Supplies Expense",
+          "description": "Purchase of office supplies",
+          "debit": 500,
+          "credit": 0
+        },
+        {
+          "id": "GLE004",
+          "accountCode": "1000",
+          "accountName": "Cash",
+          "description": "Payment for office supplies",
+          "debit": 0,
+          "credit": 500
+        }
+      ]
+    }
+  ],
+  "chartOfAccounts": [
+    {
+      "id": "COA001",
+      "code": "1000",
+      "name": "Cash",
+      "type": "asset",
+      "balance": 9500,
+      "isActive": true
+    },
+    {
+      "id": "COA002",
+      "code": "1100",
+      "name": "Accounts Receivable",
+      "type": "asset",
+      "balance": 1650,
+      "isActive": true
+    },
+    {
+      "id": "COA003",
+      "code": "1200",
+      "name": "Inventory",
+      "type": "asset",
+      "balance": 5000,
+      "isActive": true
+    },
+    {
+      "id": "COA004",
+      "code": "2000",
+      "name": "Accounts Payable",
+      "type": "liability",
+      "balance": 1375,
+      "isActive": true
+    },
+    {
+      "id": "COA005",
+      "code": "3000",
+      "name": "Capital",
+      "type": "equity",
+      "balance": 10000,
+      "isActive": true
+    },
+    {
+      "id": "COA006",
+      "code": "4000",
+      "name": "Sales Revenue",
+      "type": "revenue",
+      "balance": 5170,
+      "isActive": true
+    },
+    {
+      "id": "COA007",
+      "code": "5000",
+      "name": "Cost of Goods Sold",
+      "type": "expense",
+      "balance": 3200,
+      "isActive": true
+    },
+    {
+      "id": "COA008",
+      "code": "6100",
+      "name": "Office Supplies Expense",
+      "type": "expense",
+      "balance": 500,
+      "isActive": true
+    },
+    {
+      "id": "COA009",
+      "code": "6200",
+      "name": "Rent Expense",
+      "type": "expense",
+      "balance": 0,
+      "isActive": true
+    },
+    {
+      "id": "COA010",
+      "code": "6300",
+      "name": "Utilities Expense",
+      "type": "expense",
+      "balance": 0,
+      "isActive": true
+    }
+  ],
+  "accountingPeriods": [
+    {
+      "id": "AP2025-01",
+      "name": "January 2025",
+      "startDate": "2025-01-01T00:00:00.000Z",
+      "endDate": "2025-01-31T23:59:59.999Z",
+      "status": "closed"
+    },
+    {
+      "id": "AP2025-02",
+      "name": "February 2025",
+      "startDate": "2025-02-01T00:00:00.000Z",
+      "endDate": "2025-02-28T23:59:59.999Z",
+      "status": "closed"
+    },
+    {
+      "id": "AP2025-03",
+      "name": "March 2025",
+      "startDate": "2025-03-01T00:00:00.000Z",
+      "endDate": "2025-03-31T23:59:59.999Z",
+      "status": "open"
+    },
+    {
+      "id": "AP2025-04",
+      "name": "April 2025",
+      "startDate": "2025-04-01T00:00:00.000Z",
+      "endDate": "2025-04-30T23:59:59.999Z",
+      "status": "future"
+    }
+  ]
+}

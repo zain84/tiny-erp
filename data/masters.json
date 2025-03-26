@@ -1,0 +1,270 @@
+{
+  "companies": [
+    {
+      "id": "COMP001",
+      "name": "Main Company",
+      "email": "info@maincompany.com",
+      "phone": "123-456-7890",
+      "address": "123 Main Street, Business City, 12345",
+      "taxId": "TAX123456789",
+      "website": "www.maincompany.com",
+      "logo": "logo.png",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-03-15T00:00:00.000Z"
+    }
+  ],
+  "customerGroups": [
+    {
+      "id": "CG001",
+      "name": "Retail",
+      "description": "Retail customers",
+      "discountPercent": 0,
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "CG002",
+      "name": "Wholesale",
+      "description": "Wholesale customers",
+      "discountPercent": 10,
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "CG003",
+      "name": "VIP",
+      "description": "VIP customers",
+      "discountPercent": 15,
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUST001",
+      "name": "ABC Corporation",
+      "groupId": "CG002",
+      "groupName": "Wholesale",
+      "email": "contact@abccorp.com",
+      "phone": "123-456-7890",
+      "address": "456 Business Ave, Corporate City, 54321",
+      "taxId": "TAX987654321",
+      "creditLimit": 10000,
+      "balance": 2500,
+      "active": true,
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-03-10T00:00:00.000Z"
+    },
+    {
+      "id": "CUST002",
+      "name": "XYZ Retail Shop",
+      "groupId": "CG001",
+      "groupName": "Retail",
+      "email": "info@xyzretail.com",
+      "phone": "987-654-3210",
+      "address": "789 Shop Street, Retail Town, 67890",
+      "taxId": "TAX456789123",
+      "creditLimit": 5000,
+      "balance": 1200,
+      "active": true,
+      "createdAt": "2025-02-01T00:00:00.000Z",
+      "updatedAt": "2025-03-05T00:00:00.000Z"
+    },
+    {
+      "id": "CUST003",
+      "name": "Premium Client Inc.",
+      "groupId": "CG003",
+      "groupName": "VIP",
+      "email": "contact@premiumclient.com",
+      "phone": "555-123-4567",
+      "address": "101 Luxury Blvd, Highend City, 10101",
+      "taxId": "TAX123123123",
+      "creditLimit": 25000,
+      "balance": 8000,
+      "active": true,
+      "createdAt": "2025-01-20T00:00:00.000Z",
+      "updatedAt": "2025-03-12T00:00:00.000Z"
+    }
+  ],
+  "itemCategories": [
+    {
+      "id": "CAT001",
+      "name": "Electronics",
+      "description": "Electronic devices and accessories",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "CAT002",
+      "name": "Furniture",
+      "description": "Office and home furniture",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "CAT003",
+      "name": "Office Supplies",
+      "description": "General office supplies",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "itemUnits": [
+    {
+      "id": "UNIT001",
+      "name": "Each",
+      "abbreviation": "ea",
+      "description": "Individual item",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "UNIT002",
+      "name": "Box",
+      "abbreviation": "box",
+      "description": "Box containing multiple items",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "UNIT003",
+      "name": "Dozen",
+      "abbreviation": "dz",
+      "description": "12 items",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "UNIT004",
+      "name": "Ream",
+      "abbreviation": "rm",
+      "description": "500 sheets of paper",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "ITEM001",
+      "name": "Laptop Computer",
+      "description": "15-inch business laptop with 16GB RAM",
+      "categoryId": "CAT001",
+      "categoryName": "Electronics",
+      "unitId": "UNIT001",
+      "unitName": "Each",
+      "sku": "LAP-15-PRO",
+      "barcode": "1234567890123",
+      "costPrice": 800,
+      "sellingPrice": 1200,
+      "taxRate": 10,
+      "reorderLevel": 5,
+      "inStock": 25,
+      "active": true,
+      "createdAt": "2025-01-10T00:00:00.000Z",
+      "updatedAt": "2025-03-01T00:00:00.000Z"
+    },
+    {
+      "id": "ITEM002",
+      "name": "Office Chair",
+      "description": "Ergonomic office chair with adjustable height",
+      "categoryId": "CAT002",
+      "categoryName": "Furniture",
+      "unitId": "UNIT001",
+      "unitName": "Each",
+      "sku": "CHAIR-ERGO-1",
+      "barcode": "2345678901234",
+      "costPrice": 150,
+      "sellingPrice": 250,
+      "taxRate": 10,
+      "reorderLevel": 10,
+      "inStock": 30,
+      "active": true,
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-02-20T00:00:00.000Z"
+    },
+    {
+      "id": "ITEM003",
+      "name": "Printer Paper",
+      "description": "A4 size, 80gsm white printer paper",
+      "categoryId": "CAT003",
+      "categoryName": "Office Supplies",
+      "unitId": "UNIT004",
+      "unitName": "Ream",
+      "sku": "PAPER-A4-80",
+      "barcode": "3456789012345",
+      "costPrice": 3.5,
+      "sellingPrice": 5,
+      "taxRate": 5,
+      "reorderLevel": 50,
+      "inStock": 200,
+      "active": true,
+      "createdAt": "2025-01-05T00:00:00.000Z",
+      "updatedAt": "2025-03-10T00:00:00.000Z"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP001",
+      "name": "Tech Supplies Inc.",
+      "email": "orders@techsupplies.com",
+      "phone": "555-123-4567",
+      "address": "789 Tech Blvd, Innovation City, 56789",
+      "taxId": "TAX345678912",
+      "website": "www.techsupplies.com",
+      "contactPerson": "John Smith",
+      "paymentTerms": "Net 30",
+      "active": true,
+      "createdAt": "2025-01-05T00:00:00.000Z",
+      "updatedAt": "2025-01-05T00:00:00.000Z"
+    },
+    {
+      "id": "SUP002",
+      "name": "Office Essentials Ltd.",
+      "email": "sales@officeessentials.com",
+      "phone": "555-987-6543",
+      "address": "321 Office Park, Supply Town, 43210",
+      "taxId": "TAX567891234",
+      "website": "www.officeessentials.com",
+      "contactPerson": "Jane Doe",
+      "paymentTerms": "Net 15",
+      "active": true,
+      "createdAt": "2025-01-10T00:00:00.000Z",
+      "updatedAt": "2025-02-15T00:00:00.000Z"
+    }
+  ],
+  "locations": [
+    {
+      "id": "LOC001",
+      "name": "Main Warehouse",
+      "description": "Primary storage location",
+      "address": "100 Warehouse Road, Storage City, 12345",
+      "phone": "555-111-2222",
+      "isDefault": true,
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "LOC002",
+      "name": "Retail Store",
+      "description": "Front store location",
+      "address": "200 Retail Street, Shopping City, 67890",
+      "phone": "555-333-4444",
+      "isDefault": false,
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "updatedAt": "2025-01-01T00:00:00.000Z"
+    }
+  ]
+}

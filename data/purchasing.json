@@ -1,0 +1,176 @@
+{
+  "purchaseOrders": [
+    {
+      "id": "PO001",
+      "supplierId": "SUP001",
+      "supplierName": "Tech Supplies Inc.",
+      "orderDate": "2025-03-01T00:00:00.000Z",
+      "expectedDeliveryDate": "2025-03-15T00:00:00.000Z",
+      "status": "received",
+      "reference": "PO-2025-001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 2500,
+      "taxAmount": 250,
+      "total": 2750,
+      "notes": "Regular monthly order",
+      "items": [
+        {
+          "id": "POI001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM",
+          "quantity": 3,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 240,
+          "total": 2640
+        },
+        {
+          "id": "POI002",
+          "itemId": "ITEM003",
+          "itemName": "Printer Paper",
+          "description": "A4 size, 80gsm white printer paper",
+          "quantity": 10,
+          "unitId": "UNIT004",
+          "unitName": "Ream",
+          "unitPrice": 3.5,
+          "taxRate": 5,
+          "taxAmount": 1.75,
+          "total": 36.75
+        }
+      ]
+    },
+    {
+      "id": "PO002",
+      "supplierId": "SUP002",
+      "supplierName": "Office Essentials Ltd.",
+      "orderDate": "2025-03-10T00:00:00.000Z",
+      "expectedDeliveryDate": "2025-03-25T00:00:00.000Z",
+      "status": "ordered",
+      "reference": "PO-2025-002",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 1250,
+      "taxAmount": 125,
+      "total": 1375,
+      "notes": "Office furniture order",
+      "items": [
+        {
+          "id": "POI003",
+          "itemId": "ITEM002",
+          "itemName": "Office Chair",
+          "description": "Ergonomic office chair with adjustable height",
+          "quantity": 5,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 150,
+          "taxRate": 10,
+          "taxAmount": 75,
+          "total": 825
+        }
+      ]
+    }
+  ],
+  "purchaseInvoices": [
+    {
+      "id": "PI001",
+      "supplierId": "SUP001",
+      "supplierName": "Tech Supplies Inc.",
+      "invoiceDate": "2025-03-05T00:00:00.000Z",
+      "dueDate": "2025-04-05T00:00:00.000Z",
+      "status": "paid",
+      "reference": "INV-TS-12345",
+      "purchaseOrderId": "PO001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 2500,
+      "taxAmount": 250,
+      "total": 2750,
+      "amountPaid": 2750,
+      "balance": 0,
+      "notes": "Paid via bank transfer",
+      "items": [
+        {
+          "id": "PII001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM",
+          "quantity": 3,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 240,
+          "total": 2640
+        },
+        {
+          "id": "PII002",
+          "itemId": "ITEM003",
+          "itemName": "Printer Paper",
+          "description": "A4 size, 80gsm white printer paper",
+          "quantity": 10,
+          "unitId": "UNIT004",
+          "unitName": "Ream",
+          "unitPrice": 3.5,
+          "taxRate": 5,
+          "taxAmount": 1.75,
+          "total": 36.75
+        }
+      ]
+    }
+  ],
+  "purchaseReturns": [
+    {
+      "id": "PR001",
+      "supplierId": "SUP001",
+      "supplierName": "Tech Supplies Inc.",
+      "returnDate": "2025-03-10T00:00:00.000Z",
+      "status": "completed",
+      "reference": "RET-2025-001",
+      "purchaseInvoiceId": "PI001",
+      "locationId": "LOC001",
+      "locationName": "Main Warehouse",
+      "subtotal": 800,
+      "taxAmount": 80,
+      "total": 880,
+      "reason": "Defective product",
+      "notes": "One laptop had screen issues",
+      "items": [
+        {
+          "id": "PRI001",
+          "itemId": "ITEM001",
+          "itemName": "Laptop Computer",
+          "description": "15-inch business laptop with 16GB RAM - Defective screen",
+          "quantity": 1,
+          "unitId": "UNIT001",
+          "unitName": "Each",
+          "unitPrice": 800,
+          "taxRate": 10,
+          "taxAmount": 80,
+          "total": 880
+        }
+      ]
+    }
+  ],
+  "accountsPayable": [
+    {
+      "id": "AP001",
+      "supplierId": "SUP002",
+      "supplierName": "Office Essentials Ltd.",
+      "invoiceDate": "2025-03-15T00:00:00.000Z",
+      "dueDate": "2025-03-30T00:00:00.000Z",
+      "status": "pending",
+      "reference": "INV-OE-54321",
+      "purchaseOrderId": "PO002",
+      "subtotal": 1250,
+      "taxAmount": 125,
+      "total": 1375,
+      "amountPaid": 0,
+      "balance": 1375,
+      "notes": "Pending payment approval"
+    }
+  ]
+}
